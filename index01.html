@@ -26,15 +26,13 @@
       <button id="toggle-button">Toggle</button>
     </div>
 
-    <div id="image-container">
-      <img src="beach.jpg" />
-    </div>
+    <img id="image" src="beach.jpg" />
 
     <script>
       (function () {
         let toggle = true;
         const elMsg = document.querySelector("#msg");
-        const elImageContainer = document.querySelector("#image-container");
+        const elImage = document.querySelector("#image");
         let filename;
 
         document
@@ -45,7 +43,7 @@
             elMsg.innerHTML = `<span>Title is ${
               toggle ? "Beach" : "Mountain and Lake"
             }</span>`;
-            elImageContainer.innerHTML = `<img src="${filename}" />`;
+            elImage.src = filename;
           });
       })();
     </script>
